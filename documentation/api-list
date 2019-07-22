@@ -1,0 +1,72 @@
+List of API from Brazil search
++----------------------------------------------------------------------------------------+
+|Whois dns use python-whois                                                              |
++----------------------------------------------------------------------------------------+
+|For search company documentation with CNPJ                                              |
+|http://compras.dados.gov.br/fornecedores/doc/fornecedor_pj/<cnpj_something_numbers>.json|
++----------------------------------------------------------------------------------------+
+|For research process and jurisprudence I created a crawler for extract data from:       |
+|http://jusbrasil.com.br the crawler take process data and index                         |
++----------------------------------------------------------------------------------------+
+|For get proof of state registration I used a Receita Federal data                       |
+|http://www.receita.fazenda.gov.br                                                       |
+|/PessoaJuridica/CNPJ/cnpjreva/Cnpjreva_Vstatus.asp?origem=comprovante&cnpj=             |
++----------------------------------------------------------------------------------------+
+|For research open social capital I used a Receita Federal data                          |
+|http://www.receita.fazenda.gov.br                                                       |
+|/PessoaJuridica/CNPJ/cnpjreva/Cnpjreva_qsa.asp?origem=comprovante&cnpj=                 |
++----------------------------------------------------------------------------------------+
+|For links connection like a maltego, I used a TreatCrowd API                            |
+|https://github.com/AlienVault-OTX/ApiV2/blob/master/PythonExample/threatcrowd.py        |
+|And graphical links I used a iframe on:                                                 |
+|https://www.threatcrowd.org/domain.php?domain=                                          |
++----------------------------------------------------------------------------------------+
+|For search more subdomains we used Virus Total                                          |
+|https://developers.virustotal.com/v2.0/reference#api-responses                          |
+|witch api key: 086176161b18ee281fd2fecb9875545f87557f40b43579cd13034d71a39b63ad         |
++----------------------------------------------------------------------------------------+
+|For facebook search                                                                     |
+|Profile search                                                                          |
+|https://facebook.com/<name.profile-search>                                              |
+|About                                                                                   |
+|https://facebook.com/<name.profile-search>/about                                        |
+|[*] overview                                                                            |
+|[*] work and education                                                                  |
+|[*] places he's lived                                                                   |
+|[*] contacts and basic info                                                             |
+|[*] family and relationships                                                            |
+|[*] details about example                                                               |
+|[*] life events                                                                         |
+|Friends                                                                                 |
+|https://facebook.com/<name.profile-search>/friends                                      |
+|* This topics can change *                                                              |
+|[*] All Friends                                                                         |
+|[*] Mutual Friends                                                                      |
+|[*] College                                                                             |
+|[*] High School                                                                         |
+|[*] Current City                                                                        |
+|[*] More                                                                                |
+|Likes                                                                                   |
+|https://facebook.com/<name.profile-search>/likes                                        |
+|Photos                                                                                  |
+|https://facebook.com/<name.profile-search>/photos                                       |
+|Videos                                                                                  |
+|https://facebook.com/<name.profile-search>/videos                                       |
+|CheckIns                                                                                |
+|https://facebook.com/<name.profile-search>/map                                          |
+|Sports                                                                                  |
+|https://facebook.com/<name.profile-search>/sports                                       |
+|Music                                                                                   |
+|https://facebook.com/<name.profile-search>/music                                        |
+|TV                                                                                      |
+|https://facebook.com/<name.profile-search>.example/tv                                   |
+|Movies                                                                                  |
+|https://facebook.com/<name.profile-search.example>/movies                               |
+|Books                                                                                   |
+|https://facebook.com/<name.profile-search>.example/books                                |
+|Events                                                                                  |
+|https://facebook.com/<name.profile-search.example>/events                               |
+|Search post about company                                                               |
+|https://www.facebook.com/search/str/<name+of+company>/keywords_blended_posts            |
++----------------------------------------------------------------------------------------+
+

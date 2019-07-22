@@ -237,12 +237,6 @@ def personalInvestigation():
             location_by_facebook = facebook.location_by_facebook(profile_facebook)
 
             return render_template("personalInvestigation.html", photo_perfil=photo_perfil, likes_by_facebook=likes_by_facebook,location_by_facebook=location_by_facebook)
-
-
-
-
-
-
         return render_template("personalInvestigation.html", photo_perfil='', likes_by_facebook='',location_by_facebook='')
 
 

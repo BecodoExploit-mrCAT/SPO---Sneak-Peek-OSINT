@@ -1,0 +1,69 @@
+#particles-js{
+  background-color: #ffe0b2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+
+}
+
+.loginScreen{
+
+  background-repeat: no-repeat;
+  background-size:100%;
+
+
+}
+
+.logoDashboard{
+    position: relative;
+    width:100%;
+    align:center;
+
+}
+
+
+
+.login{
+    position:absolute;
+    width: 25%;
+    left:10%;
+    top:9%;
+    right:20%;
+    z-index: 1;
+
+
+}
+
+
+
+.dashboard{
+    background-color: #ffe0b2;
+
+
+}
+
+
+
+
+.error{
+
+   background-repeat: no-repeat;
+   background-size:100%;
+   position:absolute;
+   width: 25%;
+   left:19%;
+   top:9%;
+   right:20%;
+   z-index: 1;
+
+
+}
+
+html,body{
+  width:100%;
+  height:100%;
+
+}
+

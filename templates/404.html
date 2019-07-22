@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+   <head>
+       <!--URL icon-->
+      <link rel="icon" href="{{ url_for('static', filename='img/spoICO.png') }}" type="image/x-icon" />
+      <link rel="shortcut icon" href="{{ url_for('static', filename='img/spoICO.png') }}" type="image/x-icon" />
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+      <!--Style css -->
+      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta charset="UTF-8">
+      <title>SPO - Sneak Peak OSINT </title>
+   </head>
+   <body background="{{ url_for('static', filename='img/bg.jpg') }}" class="error" id="particles-js">
+      <div class="error">
+      <div class="row">
+      <div class="error col s2 m3"></div>
+      <div class="card-panel grey darken-4">
+         <div class="card-action white-text center">
+            <i class="large material-icons">hot_tub</i>
+            <br>Page Not Found.<br>
+            <a href="{{ url_for('login')}}">Back</a>
+         </div>
+      </div>
+      <!--particles-->
+      <script src="{{ url_for('static', filename='js/particles.js-master/particles.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/configParticle.js') }}"></script>
+   </body>
+</html>

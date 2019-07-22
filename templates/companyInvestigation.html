@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- utf-8 -->
+      <meta charset="UTF-8">
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--URL icon-->
+      <link rel="icon" href="{{ url_for('static', filename='img/spoICO.png') }}" type="image/x-icon" />
+      <link rel="shortcut icon" href="{{ url_for('static', filename='img/spoICO.png') }}" type="image/x-icon" />
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+      <!--Style css -->
+      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta charset="UTF-8">
+      <title>SPO - Sneak Peek OSINT -- Dashboard</title>
+   </head>
+   <body class="dashboard">
+      <nav>
+         <div class="nav-wrapper blue-grey darken-4">
+            <ul class="right hide-on-med-and-down">
+               <li><a href="sass.html"><i class="material-icons">search</i></a></li>
+               <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
+               <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
+            </ul>
+         </div>
+      </nav>
+      <ul class="side-nav col s6 fixed blue-grey darken-4">
+         <li class="white-text center">
+            <p>
+               <i class="large material-icons">device_hub</i>
+            <h6>S N E A K   P E E K   O S I N T</h6>
+            </p>
+         </li>
+         <li>
+            <div class="divider"></div>
+            <ul class="collapsible white">
+               <li>
+                  <div class="collapsible-header">
+                     <i class="material-icons">visibility</i>
+                     Investigation
+                  </div>
+                 <div class="collapsible-body">
+                     <a href="{{ url_for('companyInvestigation') }}" class="btn-flat tooltipped" data-position="right" data-delay="50" data-tooltip="Click here to start a new Company investigation, this is the first step for your investigation about this company.">Company Investigation</a>
+                  </div>
+                  <div class="collapsible-body">
+                     <a href="{{ url_for('personalInvestigation') }}" class="btn-flat tooltipped" data-position="right" data-delay="50" data-tooltip="Click here to start a new personal investigation, this is the first step for your personal investigation.">Personal Investigation</a>
+                  </div>
+               </li>
+               <li>
+                  <div class="collapsible-header">
+                     <i class="material-icons">dns</i>
+                     Databases
+                  </div>
+                  <div class="collapsible-body">
+                     <a href="" class="btn-flat tooltipped" data-position="right" data-delay="50" data-tooltip="Click here to open your databases">Show Databases</a>
+                     <a href="" class="btn-flat tooltipped" data-position="right" data-delay="50" data-tooltip="Click here to create a new database ">Create Database</a>
+                  </div>
+               </li>
+               <li>
+                  <div class="collapsible-header">
+                     <i class="material-icons">airplay</i>
+                     Search for Servers
+                  </div>
+                  <div class="collapsible-body">
+                     <a href="{{ url_for('searchServers') }}" class="btn-flat tooltipped" data-position="right" data-delay="50" data-tooltip="Click here to search a server or service">Server or Service</a>
+                  </div>
+               </li>
+               <li>
+                  <div class="collapsible-header">
+                     <i class="material-icons">account_circle</i>
+                     Personal Trace
+                  </div>
+                  <div class="collapsible-body">
+                     <a href="{{ url_for('personalTrace') }}" class="btn-flat tooltipped" data-position="right" data-delay="50" data-tooltip="Click here to search a person">Personal Search</a>
+                  </div>
+               </li>
+               <li>
+                  <div class="collapsible-header">
+                     <i class="material-icons">assignment_ind</i>
+                     <a href="{{ url_for('aboutUS')}}" class="black-text">Contact / About us</a>
+                  </div>
+               </li>
+               <li>
+                  <div class="collapsible-header">
+                     <i class="material-icons">help_outline</i>
+                     Help
+                  </div>
+                  <div class="collapsible-body">
+                     <div class="row">
+                        <div class="card blue-grey black">
+                           <div class="card-content white-text">
+                              <span class="card-title">SPO Sneak Peek OSINT</span>
+                              <p>SPO is a software for OSINT research and creates a case for investigation. If you want learn about Opensource Inteligence click below </p>
+                           </div>
+                           <div class="card-action">
+                              <a href="{{ url_for('aboutOSINT') }}">Read more about OSINT</a>
+                              <a href="{{ url_for('manual') }}">How to use SPO</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </li>
+            </ul>
+         </li>
+         <div class="divider"></div>
+          <li>
+              <a class="waves-effect waves-light btn-small grey-text modal-trigger" href="#new">NEW PROJECT<i class="material-icons">add</i></a>
+
+          </li>
+      </ul>
+      <div class="row">
+         <div class="col s9 offset-s3">
+            <div class="card horizontal">
+               <div class="card-stacked">
+                  <div class="card-content">
+                      <h4 class="center">C O M P A N Y  - I N V E S T I G A T I O N </h4>
+                     <h6 class="center">
+                        Select a single quick category for investigation or start a new project for save data on DB.
+                     </h6>
+
+                  </div>
+               </div>
+            </div>
+            <div class="col s12 blue-grey darken-4 white-text">
+               <div class="card-content blue-grey darken-4 white-text">
+                  <p>
+                  <h4><i class="material-icons">language</i> Domain Address Information</h4>
+                  <form action="{{ url_for('companyInvestigation')}}" method="POST">
+                     <label for="domain">Insert the Domain here: example.com and wait SPO crawlers search information, if you want save a information data on database exportable create a new project. if the information is null, it is because the company does not have a register on biddings.</label>
+                     <input name="domain" id="domain" type="text">
+                     <div>
+                        <ul class="collapsible blue-grey darken-4 white-text">
+                           <li>
+                              <div class="collapsible-header blue-grey darken-4 white-text"><i class="material-icons">face</i>Owner name</div>
+                              <div class="collapsible-body blue-grey darken-4 white-text"><span>{{ ownerDomainInfo['owner'] }}</span></div>
+                           </li>
+                           <li>
+                              <div class="collapsible-header blue-grey darken-4 white-text"><i class="material-icons">email</i>Owner Emails</div>
+                              <div class="collapsible-body blue-grey darken-4 white-text"><span>{{ ownerDomainInfo['owneremail']}}</span></div>
+                           </li>
+                           <li>
+                              <div class="collapsible-header blue-grey darken-4 white-text"><i class="material-icons">assignment_ind</i>Owner ID</div>
+                              <div class="collapsible-body blue-grey darken-4 white-text"><span>{{ ownerDomainInfo['ownerid'] }}</span></div>
+                           </li>
+                           <li>
+                              <div class="collapsible-header blue-grey darken-4 white-text"><i class="material-icons">grain</i>Subdomains</div>
+
+                               <div class="collapsible-body blue-grey darken-4 white-text">{% if subdomain %}{% for i in subdomain %}<span>{{ i }}<br></span>{% endfor %}{% endif %}</div>
+
+                           </li>
+                           <li>
+                              <div class="collapsible-header blue-grey darken-4 white-text modal-trigger" href="#proof"><i class="material-icons">class</i>Show proof of state registration</div>
+                           </li>
+                            <li>
+                              <div class="collapsible-header blue-grey darken-4 white-text modal-trigger" href="#link"><i class="material-icons">center_focus_strong</i>Show links of domain</div>
+                           </li>
+                           <li>
+                              <div class="collapsible-header blue-grey darken-4 white-text"><i class="material-icons">domain</i>Information about Company</div>
+                              <div class="collapsible-body blue-grey darken-4 white-text"><span><b>Social Name:</b> {{ domainInfo['social_name'] }}</span></div>
+                              <div class="collapsible-body blue-grey darken-4 white-text"><span><b>Fantasy Name:</b> {{ domainInfo['fantasy_name'] }}</span></div>
+                              <div class="collapsible-body blue-grey darken-4 white-text"><span><b>Legal Nature:</b> {{ domainInfo['legal_nature'] }}</span></div>
+                              <div class="collapsible-body blue-grey darken-4 white-text"><span><b>Business Type:</b> {{ domainInfo['type_business'] }}</span></div>
+                              <div class="collapsible-body blue-grey darken-4 white-text"><span><b>Business Size:</b> {{ domainInfo['business_size'] }}</span></div>
+                              <div class="collapsible-body blue-grey darken-4 white-text"><span><b>Address:</b> {{ domainInfo['address'] }}</span></div>
+                              <div class="collapsible-body blue-grey darken-4 white-text"><span><b>CNPJ status:</b> {{ domainInfo['isActive'] }}</span></div>
+                              <div class="collapsible-body blue-grey darken-4 white-text"><span><b>Biddings:</b><br>{{ domainInfo['biddings'] }}</span></div>
+                              <div class="collapsible-body blue-grey darken-4 white-text"><span><b>Public Contracts:</b><br>{{ domainInfo['public_contracts'] }}</span></div>
+                              <div class="collapsible-body blue-grey darken-4 white-text"><span><b>Bidding Permission:</b><br>{{ domainInfo['bidding_permission'] }}</span></div>
+                           </li>
+                           <li>
+                              <div class="collapsible-header blue-grey darken-4 white-text"><i class="material-icons">account_balance</i>Information about Company Process and Jurisprudence</div>
+                              {% for i in jurisprudence %}
+                              <div class="collapsible-body blue-grey darken-4 white-text"><span><b class="blue-text">{{ i }}:  </b>{{ jurisprudence[i] }}</span></div>
+                              {% endfor %}
+                           </li>
+                        </ul>
+                     </div>
+               </div>
+               </form>
+               </p>
+         </div>
+         <!-- View  Social Capital and Proof of state registration Structure -->
+         <div id="proof" class="modal">
+               <iframe class="modal-content" src="http://www.receita.fazenda.gov.br/PessoaJuridica/CNPJ/cnpjreva/Cnpjreva_Vstatus.asp?origem=comprovante&cnpj={{ cnpj }}" frameborder="0" width="800px" height="600px"></iframe>
+         </div>
+             <!-- View links of domain -->
+         <div id="link" class="modal">
+               <iframe class="modal-content" src="https://www.threatcrowd.org/graphHtml.php?domain={{ domain_name }}" frameborder="0" width="800px" height="600px"></iframe>
+         </div>
+             <!-- New Project -->
+               <div id="new" class="modal card">
+                  <div class="card-image waves-effect waves-block waves-light">
+                     <img class="activator" src="{{ url_for('static', filename='img/investigation.png') }}">
+                  </div>
+                  <div class="card-content">
+                     <span class="card-title activator grey-text text-darken-4">Start a New Project<i class="material-icons right">more_vert</i></span>
+                  </div>
+                  <div class="card-reveal">
+                     <span class="card-title grey-text text-darken-4 center"><i class="material-icons left">format_shapes</i>  New Project<i class="material-icons right">close</i></span>
+                     <p>On a new project all data searched is saved on data base, this is ideal for after export evidences</p>
+                     <form class="col s12" action="{{ url_for('companyInvestigation')}}" method="POST">
+                        <div class="input-field col s12">
+                           <input name="nameOfProject" id="input_text" type="text" data-length="10">
+                           <label for="input_text">Name of Project</label>
+                        </div>
+                     </form>
+                  </div>
+      <div class="col s4 m4"></div>
+      <div class="fixed-action-btn">
+         <a class="btn-floating btn-large tooltiped red ">
+         <i class="large material-icons">settings</i>
+         </a>
+         <ul>
+            <li><a href="{{ url_for('insertKeys') }}" class="btn-floating tooltipped light-blue darken-4" data-position="bottom" data-delay="50" data-tooltip="Add social media keys"><i class="material-icons">vpn_key</i></a></li>
+            <li><a href="{{ url_for('exit') }}" class="btn-floating tooltipped grey darken-4" data-position="bottom" data-delay="50" data-tooltip="exit"><i class="material-icons">move_to_inbox</i></a></li>
+         </ul>
+      </div>
+      </li>
+      </div>
+      <!--jQuery materialize-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <!-- Compiled and minified JavaScript -->
+      <script src="{{ url_for('static', filename='js/materialize.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/button.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/modal.js') }}"></script>
+   </body>
+</html>

@@ -13,10 +13,9 @@ other license different than GPLv2.
 
 IRC for development
 
-irc://agora3cdw6kdty5y.onion:6667 or old: irc://cfyfz6afpgfeirst.onion:6667/#agora.
-Host: agora3cdw6kdty5y.onion Port: 6667
-Host: cfyfz6afpgfeirst.onion Port: 6667
-Room: #underground
+irc.oftc.net
+#becodoxpl
+
 
 I'm a security researcher and python developer.
 I created this software because I wanted study about OSINT.

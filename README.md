@@ -30,7 +30,7 @@ journalists, curious and whoever you want, SPO is opensource and free!
 
 
 Projected and Developed by @Victor_de_Queiroz
-Contact: CATx003@protonmail.com
+Contact: contato@becodoexploit.com
 
 IRC for development
 
